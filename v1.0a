@@ -1,0 +1,71 @@
+#include <iostream>
+#include <string>
+using std::cout; 
+
+int main(){
+
+    int choice; 
+    int money = 100; 
+    int shop; 
+    int item_cost = 0; 
+    std::string item_name = "Default"; 
+    std::cout << "Welcome to the SOLO Shop\n"; 
+    std::cout << "\nWhat would you like?\n";
+    cout << "1 - Shop Items\n";  
+    cout << "2 - Account\n";
+    cout << "3 - Post your own item\n";
+    cout << "3 - Exit\n";
+    std::cin >> choice;
+    switch (choice)
+    {
+    case 1:
+        cout << "1 - Tuna - 1 dollar\n"; 
+        cout << "2 - Fish - 2 dollar\n";
+        cout << "3 - Pinnapple - 10 dollars\n";
+        cout << "4 - Sandwitch - 5 dollar\n";  
+        cout << "5 - Exit\n"; 
+        std::cin >> shop; 
+        switch (shop)
+        {
+        case 1:
+            cout << "You just bought some Tuna for 1 dollars\n";
+            money = money - 1;  
+            cout << "Your Account Balence:" << money << "\n"; 
+            cout << "Press 0 you exit"; 
+            std::cin >> choice; 
+            break;
+        case 2:
+        cout << "You just bought some Fish for 1 dollars\n"; 
+         money = money - 1; 
+        cout << "Your Account Balence:\n" << money << "\n";
+        break;
+        case 3:
+        cout << "You have bought a Pinnapple for 10 dollars";
+        money = money - 10; 
+        cout << "Your Account Balcence:" << money << "\n";
+        cout << "Press 0 to exit\n";
+        std::cin >> choice; 
+        break; 
+        default:
+            break;
+        }
+        break;
+    case 2:
+        cout << "Account Balence 100 Dollars\n";
+        cout << "Press 0 to close\n"; 
+        std::cin >> choice;
+    break;
+    case 3:
+    cout << "Post Maker v1.0 by Dinith\n"; 
+    cout << "What is your items name\n"; 
+    std::cin >> item_name; 
+    cout << "Great\nWhat will be the price of the item (Whole Number)\n";
+    std::cin >> item_cost;
+    cout << "Your all done lets see your post!\n";
+    cout << item_name << "\n" << "Cost:" << item_cost << "\n";
+    break;
+    default:
+        break;
+    }
+
+}
